@@ -1,0 +1,216 @@
+/* Body fade */
+body {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+body.visible {
+    opacity: 1;
+}
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+header .logo {
+    height: 50px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('../images/banner.jpg') no-repeat center center;
+    background-size: cover;
+}
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+.hero .btn:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Floating Animation */
+.float-up {
+    opacity: 0;
+    transform: translateY(30px); /* start below */
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.float-up.visible {
+    opacity: 1;
+    transform: translateY(0); /* float up on load */
+}
+.float-up.exit {
+    opacity: 0;
+    transform: translateY(30px); /* float down on exit */
+}
+
+/* Highlights */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 20px;
+}
+.feature {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.6s cubic-bezier(0.25,0.1,0.25,1), box-shadow 0.6s cubic-bezier(0.25,0.1,0.25,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+}
+.feature:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 40px rgba(255,87,34,0.8);
+}
+.feature .text {
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+}
+.feature img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+.feature:hover img {
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,87,34,0.7);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+}
+footer a {
+    color: #ff5722;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+/* Styled links like buttons */
+.link-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #7289da; /* Discord blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.link-btn:hover {
+    background-color: #5b6eae;
+    transform: scale(1.05);
+}
+
+/* Email button style (orange like main buttons) */
+.link-btn.email {
+    background-color: #ff5722;
+}
+
+.link-btn.email:hover {
+    background-color: #e64a19;
+}
+
+.logo {
+    height: 50px;             /* keep the original size */
+    border-radius: 15px;      /* rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);   /* slight zoom on hover */
+}
+
+.logo {
+    background-color: rgba(255,255,255,0.05); /* very subtle background */
+    padding: 5px;
+}
+.logo:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5); /* stronger shadow on hover */
+}
